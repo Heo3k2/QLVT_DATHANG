@@ -129,12 +129,12 @@ namespace QLVT_DATHANG
                 return false;
             }
 
-            if (Regex.IsMatch(txtTenVT.Text.Trim(), @"^[a-zA-ZÀ-ỹ0-9\s]+$") == false)
+            /*if (Regex.IsMatch(txtTenVT.Text.Trim(), @"^[a-zA-ZÀ-ỹ0-9\s]+$") == false)
             {
                 MessageBox.Show("Tên vật tư chỉ chấp nhận chữ, số và khoảng trắng", "Thông báo", MessageBoxButtons.OK);
                 txtTenVT.Focus();
                 return false;
-            }
+            }*/
 
             if (txtTenVT.Text.Length > 30)
             {

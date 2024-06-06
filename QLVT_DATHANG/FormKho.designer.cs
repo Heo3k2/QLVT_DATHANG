@@ -35,6 +35,7 @@ namespace QLVT_DATHANG
             System.Windows.Forms.Label tENKHOLabel;
             System.Windows.Forms.Label dIACHILabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKho));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.barButtonItemThem = new DevExpress.XtraBars.BarButtonItem();
@@ -311,7 +312,10 @@ namespace QLVT_DATHANG
             // gcKho
             // 
             this.gcKho.DataSource = this.bdsKho;
-            this.gcKho.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcKho.Dock = System.Windows.Forms.DockStyle.Top;
+            gridLevelNode1.RelationName = "Level1";
+            this.gcKho.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
             this.gcKho.Location = new System.Drawing.Point(2, 2);
             this.gcKho.MainView = this.gridView1;
             this.gcKho.MenuManager = this.barManager1;
