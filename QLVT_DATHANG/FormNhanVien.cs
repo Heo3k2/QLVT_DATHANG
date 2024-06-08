@@ -567,6 +567,13 @@ namespace QLVT_DATHANG
                     Program.loginName = Program.currentLogin;
                     Program.loginPassword = Program.currentPassword;
 
+                    if (Program.KetNoi() == 0)
+                    {
+                        return;
+                    }
+
+                    Console.WriteLine(Program.serverName + " " + Program.loginName + " " + Program.loginPassword);
+
                     this.NhanVienTableAdapter.Fill(this.DS.NhanVien);
                     if (undoList.Count == 0)
                     {
@@ -619,10 +626,10 @@ namespace QLVT_DATHANG
                 Program.serverNameLeft = "MSI\\SERVER1";
             }
 
-            string cauTruyVanHoanTac = "EXEC sp_chuyenChiNhanh " + soCMND + ", '" + maChiNhanhHienTai + "'";
+            string cauTruyVanHoanTac = "EXEC sp_chuyenChiNhanh '" + soCMND + "', '" + maChiNhanhHienTai + "'";
             undoList.Push(cauTruyVanHoanTac);
             Console.WriteLine(cauTruyVanHoanTac);
-            string cauTruyVan = "EXEC sp_chuyenChiNhanh " + soCMND + ", '" + maChiNhanhMoi + "'";
+            string cauTruyVan = "EXEC sp_chuyenChiNhanh '" + soCMND + "', '" + maChiNhanhMoi + "'";
             SqlCommand sqlCommand = new SqlCommand(cauTruyVan, Program.conn);
 
             Console.WriteLine("Câu truy vấn: " + cauTruyVan);
@@ -631,23 +638,26 @@ namespace QLVT_DATHANG
 
             try
             {
-                Program.myReader = Program.ExecSqlDataReader(cauTruyVan);
-                MessageBox.Show("Chuyển chi nhánh thành công", "Thông báo", MessageBoxButtons.OK);
-                barButtonItemPhucHoi.Enabled = true;
-                this.NhanVienTableAdapter.Fill(this.DS.NhanVien);
-
-                if(Program.myReader == null)
+                SqlDataReader reader = Program.ExecSqlDataReader(cauTruyVan);
+               
+                if(reader == null)
                 {
                     return;
-                }    
+                }
+
+                reader.Read();
+                MessageBox.Show("Chuyển chi nhánh thành công", "Thông báo", MessageBoxButtons.OK);
+                barButtonItemPhucHoi.Enabled = true;
+                this.NhanVienTableAdapter.Update(this.DS.NhanVien);
+                this.NhanVienTableAdapter.Fill(this.DS.NhanVien);
+                reader.Close();
             } 
             catch (Exception ex)
             {
                 MessageBox.Show("Thực thi database thất bại!\n\n" + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Console.WriteLine(ex.Message);
                 return;
-            }
-            this.NhanVienTableAdapter.Update(this.DS.NhanVien);
+            }       
         }
 
         private void barButtonItemChuyenChiNhanh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -658,10 +668,10 @@ namespace QLVT_DATHANG
             {
                 trangThai = 1;
             }    
-            string maNhanVien = ((DataRowView)(bdsNhanVien[viTriHienTai]))["MANV"].ToString();
-            string soCMND = ((DataRowView)(bdsNhanVien[viTriHienTai]))["SOCMND"].ToString();
+            string maNhanVien = ((DataRowView)(bdsNhanVien[viTriHienTai]))["MANV"].ToString().Trim();
+            string soCMND = ((DataRowView)(bdsNhanVien[viTriHienTai]))["SOCMND"].ToString().Trim();
             string maChiNhanhHienTai = ((DataRowView)(bdsNhanVien[viTriHienTai]))["MACN"].ToString().Trim();
-
+            Console.WriteLine(maNhanVien + " " + soCMND + " " + maChiNhanhHienTai);
             if (maNhanVien == Program.userName)
             {
                 MessageBox.Show("Không thể chuyển chi nhánh người đang đăng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
