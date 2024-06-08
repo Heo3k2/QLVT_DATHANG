@@ -317,7 +317,7 @@ namespace QLVT_DATHANG
 
 
                     undoList.Push(cauTruyVanHoanTac);
-                    Console.WriteLine("Câu truy vấn hoàn tác: " + cauTruyVan);
+                    Console.WriteLine("Câu truy vấn hoàn tác: " + cauTruyVanHoanTac);
 
                     this.bdsPX.EndEdit();
                     this.PXTableAdapter.Update(this.DS.PhieuXuat);

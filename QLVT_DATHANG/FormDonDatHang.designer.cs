@@ -279,17 +279,17 @@ namespace QLVT_DATHANG
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl2.Location = new System.Drawing.Point(0, 0);
             this.barDockControl2.Manager = this.barManager1;
-            this.barDockControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.barDockControl2.Size = new System.Drawing.Size(1255, 30);
+            this.barDockControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControl2.Size = new System.Drawing.Size(1179, 30);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 745);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 705);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1255, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1179, 0);
             // 
             // barDockControlLeft
             // 
@@ -297,17 +297,17 @@ namespace QLVT_DATHANG
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 715);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 675);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1255, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(1179, 30);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 715);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 675);
             // 
             // panelControl1
             // 
@@ -317,7 +317,7 @@ namespace QLVT_DATHANG
             this.panelControl1.Location = new System.Drawing.Point(0, 30);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1255, 68);
+            this.panelControl1.Size = new System.Drawing.Size(1179, 81);
             this.panelControl1.TabIndex = 9;
             // 
             // cmbChiNhanh
@@ -394,10 +394,10 @@ namespace QLVT_DATHANG
             this.groupDatHang.Controls.Add(masoDDHLabel);
             this.groupDatHang.Controls.Add(this.txtMaSoDDH);
             this.groupDatHang.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupDatHang.Location = new System.Drawing.Point(0, 424);
-            this.groupDatHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupDatHang.Location = new System.Drawing.Point(0, 382);
+            this.groupDatHang.Margin = new System.Windows.Forms.Padding(4);
             this.groupDatHang.Name = "groupDatHang";
-            this.groupDatHang.Size = new System.Drawing.Size(696, 321);
+            this.groupDatHang.Size = new System.Drawing.Size(696, 323);
             this.groupDatHang.TabIndex = 19;
             this.groupDatHang.Text = "Đơn Đặt Hàng";
             // 
@@ -409,7 +409,7 @@ namespace QLVT_DATHANG
             this.cmbHoTen.DisplayMember = "HOTEN";
             this.cmbHoTen.FormattingEnabled = true;
             this.cmbHoTen.Location = new System.Drawing.Point(437, 141);
-            this.cmbHoTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbHoTen.Margin = new System.Windows.Forms.Padding(4);
             this.cmbHoTen.Name = "cmbHoTen";
             this.cmbHoTen.Size = new System.Drawing.Size(198, 24);
             this.cmbHoTen.TabIndex = 12;
@@ -424,7 +424,7 @@ namespace QLVT_DATHANG
             // 
             this.btnChonMaKho.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChonMaKho.Location = new System.Drawing.Point(373, 184);
-            this.btnChonMaKho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChonMaKho.Margin = new System.Windows.Forms.Padding(4);
             this.btnChonMaKho.Name = "btnChonMaKho";
             this.btnChonMaKho.Size = new System.Drawing.Size(262, 28);
             this.btnChonMaKho.TabIndex = 10;
@@ -436,7 +436,7 @@ namespace QLVT_DATHANG
             // 
             this.txtMaKho.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsDatHang, "MAKHO", true));
             this.txtMaKho.Location = new System.Drawing.Point(147, 188);
-            this.txtMaKho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaKho.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaKho.MenuManager = this.barManager1;
             this.txtMaKho.Name = "txtMaKho";
             this.txtMaKho.Size = new System.Drawing.Size(198, 22);
@@ -446,7 +446,7 @@ namespace QLVT_DATHANG
             // 
             this.txtMaNV.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsDatHang, "MANV", true));
             this.txtMaNV.Location = new System.Drawing.Point(146, 142);
-            this.txtMaNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaNV.MenuManager = this.barManager1;
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(200, 22);
@@ -456,7 +456,7 @@ namespace QLVT_DATHANG
             // 
             this.txtNhaCC.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsDatHang, "NhaCC", true));
             this.txtNhaCC.Location = new System.Drawing.Point(146, 96);
-            this.txtNhaCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNhaCC.Margin = new System.Windows.Forms.Padding(4);
             this.txtNhaCC.MenuManager = this.barManager1;
             this.txtNhaCC.Name = "txtNhaCC";
             this.txtNhaCC.Size = new System.Drawing.Size(200, 22);
@@ -468,7 +468,7 @@ namespace QLVT_DATHANG
             this.dtpNgay.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bdsDatHang, "NGAY", true));
             this.dtpNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgay.Location = new System.Drawing.Point(437, 48);
-            this.dtpNgay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpNgay.Margin = new System.Windows.Forms.Padding(4);
             this.dtpNgay.Name = "dtpNgay";
             this.dtpNgay.Size = new System.Drawing.Size(198, 23);
             this.dtpNgay.TabIndex = 3;
@@ -477,7 +477,7 @@ namespace QLVT_DATHANG
             // 
             this.txtMaSoDDH.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsDatHang, "MasoDDH", true));
             this.txtMaSoDDH.Location = new System.Drawing.Point(146, 50);
-            this.txtMaSoDDH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaSoDDH.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaSoDDH.MenuManager = this.barManager1;
             this.txtMaSoDDH.Name = "txtMaSoDDH";
             this.txtMaSoDDH.Size = new System.Drawing.Size(200, 22);
@@ -491,10 +491,10 @@ namespace QLVT_DATHANG
             // 
             this.panel1.Controls.Add(this.dgvCTDDH);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(696, 424);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(696, 382);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(559, 321);
+            this.panel1.Size = new System.Drawing.Size(483, 323);
             this.panel1.TabIndex = 24;
             // 
             // dgvCTDDH
@@ -511,10 +511,10 @@ namespace QLVT_DATHANG
             this.dgvCTDDH.DataSource = this.bdsCTDDH;
             this.dgvCTDDH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCTDDH.Location = new System.Drawing.Point(0, 0);
-            this.dgvCTDDH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCTDDH.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCTDDH.Name = "dgvCTDDH";
             this.dgvCTDDH.RowHeadersWidth = 51;
-            this.dgvCTDDH.Size = new System.Drawing.Size(559, 321);
+            this.dgvCTDDH.Size = new System.Drawing.Size(483, 323);
             this.dgvCTDDH.TabIndex = 18;
             // 
             // dataGridViewTextBoxColumn1
@@ -638,13 +638,13 @@ namespace QLVT_DATHANG
             // 
             this.gcDatHang.DataSource = this.bdsDatHang;
             this.gcDatHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcDatHang.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gcDatHang.Location = new System.Drawing.Point(0, 98);
+            this.gcDatHang.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gcDatHang.Location = new System.Drawing.Point(0, 111);
             this.gcDatHang.MainView = this.gridView1;
-            this.gcDatHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcDatHang.Margin = new System.Windows.Forms.Padding(4);
             this.gcDatHang.MenuManager = this.barManager1;
             this.gcDatHang.Name = "gcDatHang";
-            this.gcDatHang.Size = new System.Drawing.Size(1255, 326);
+            this.gcDatHang.Size = new System.Drawing.Size(1179, 271);
             this.gcDatHang.TabIndex = 18;
             this.gcDatHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -692,7 +692,7 @@ namespace QLVT_DATHANG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1255, 745);
+            this.ClientSize = new System.Drawing.Size(1179, 705);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupDatHang);
@@ -702,9 +702,10 @@ namespace QLVT_DATHANG
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControl2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormDonDatHang";
             this.Text = "Đơn Đặt Hàng";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormDonDatHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
