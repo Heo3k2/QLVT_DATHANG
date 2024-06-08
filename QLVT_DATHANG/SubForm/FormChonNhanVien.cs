@@ -20,7 +20,7 @@ namespace QLVT_DATHANG.SubForm
         private void nhanVienBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.bdsNhanVien.EndEdit();
+            this.bdsNhanVienHienTai.EndEdit();
             this.tableAdapterManager.UpdateAll(this.DS);
 
         }
@@ -29,8 +29,8 @@ namespace QLVT_DATHANG.SubForm
         {
             DS.EnforceConstraints = false;
 
-            this.nhanVienTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.nhanVienTableAdapter.Fill(this.DS.NhanVien);
+            this.dSNhanVienHienTaiTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.dSNhanVienHienTaiTableAdapter.Fill(this.DS.DSNhanVienHienTai);
         }
 
         private void btnTHOAT_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace QLVT_DATHANG.SubForm
 
         private void btnCHON_Click(object sender, EventArgs e)
         {
-            DataRowView drv = ((DataRowView)(bdsNhanVien.Current));
+            DataRowView drv = ((DataRowView)(bdsNhanVienHienTai.Current));
             string maNhanVien = drv["MANV"].ToString().Trim();
 
             string ho = drv["HO"].ToString().Trim();
