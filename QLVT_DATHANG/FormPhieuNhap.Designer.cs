@@ -573,9 +573,11 @@ namespace QLVT_DATHANG
             // 
             // dtpNgay
             // 
+            this.dtpNgay.CustomFormat = "dd/MM/yyyy";
             this.dtpNgay.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bdsPN, "NGAY", true));
             this.dtpNgay.Enabled = false;
             this.dtpNgay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgay.Location = new System.Drawing.Point(428, 40);
             this.dtpNgay.Name = "dtpNgay";
             this.dtpNgay.Size = new System.Drawing.Size(213, 28);

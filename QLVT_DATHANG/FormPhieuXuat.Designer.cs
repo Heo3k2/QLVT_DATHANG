@@ -558,9 +558,11 @@ namespace QLVT_DATHANG
             // 
             // txtDate
             // 
+            this.txtDate.CustomFormat = "dd/MM/yyyy";
             this.txtDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bdsPX, "NGAY", true));
             this.txtDate.Enabled = false;
             this.txtDate.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txtDate.Location = new System.Drawing.Point(422, 59);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(221, 28);
