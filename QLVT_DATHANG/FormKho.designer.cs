@@ -30,12 +30,11 @@ namespace QLVT_DATHANG
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label mAKHOLabel;
-            System.Windows.Forms.Label mACNLabel;
-            System.Windows.Forms.Label tENKHOLabel;
-            System.Windows.Forms.Label dIACHILabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKho));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            System.Windows.Forms.Label dIACHILabel;
+            System.Windows.Forms.Label mAKHOLabel;
+            System.Windows.Forms.Label tENKHOLabel;
+            System.Windows.Forms.Label mACNLabel;
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.barButtonItemThem = new DevExpress.XtraBars.BarButtonItem();
@@ -52,20 +51,8 @@ namespace QLVT_DATHANG
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
             this.labelChiNhanh = new System.Windows.Forms.Label();
-            this.panelNhapLieu = new System.Windows.Forms.Panel();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.gcKho = new DevExpress.XtraGrid.GridControl();
             this.bdsKho = new System.Windows.Forms.BindingSource(this.components);
             this.DS = new QLVT_DATHANG.DS();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMAKHO = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTENKHO = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDIACHI = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.txtDIACHI = new System.Windows.Forms.TextBox();
-            this.txtTENKHO = new System.Windows.Forms.TextBox();
-            this.txtMACN = new System.Windows.Forms.TextBox();
-            this.txtMAKHO = new System.Windows.Forms.TextBox();
             this.khoTableAdapter = new QLVT_DATHANG.DSTableAdapters.KhoTableAdapter();
             this.tableAdapterManager = new QLVT_DATHANG.DSTableAdapters.TableAdapterManager();
             this.bdsPhieuXuat = new System.Windows.Forms.BindingSource(this.components);
@@ -74,60 +61,37 @@ namespace QLVT_DATHANG
             this.phieuNhapTableAdapter = new QLVT_DATHANG.DSTableAdapters.PhieuNhapTableAdapter();
             this.bdsDatHang = new System.Windows.Forms.BindingSource(this.components);
             this.datHangTableAdapter = new QLVT_DATHANG.DSTableAdapters.DatHangTableAdapter();
-            mAKHOLabel = new System.Windows.Forms.Label();
-            mACNLabel = new System.Windows.Forms.Label();
-            tENKHOLabel = new System.Windows.Forms.Label();
+            this.panelNhapLieu = new DevExpress.XtraEditors.PanelControl();
+            this.txtMAKHO = new System.Windows.Forms.TextBox();
+            this.txtDIACHI = new System.Windows.Forms.TextBox();
+            this.txtMACN = new System.Windows.Forms.TextBox();
+            this.txtTENKHO = new System.Windows.Forms.TextBox();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.gcKho = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colMAKHO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTENKHO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDIACHI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             dIACHILabel = new System.Windows.Forms.Label();
+            mAKHOLabel = new System.Windows.Forms.Label();
+            tENKHOLabel = new System.Windows.Forms.Label();
+            mACNLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            this.panelNhapLieu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsPhieuXuat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsPhieuNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsDatHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelNhapLieu)).BeginInit();
+            this.panelNhapLieu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcKho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // mAKHOLabel
-            // 
-            mAKHOLabel.AutoSize = true;
-            mAKHOLabel.Location = new System.Drawing.Point(96, 548);
-            mAKHOLabel.Name = "mAKHOLabel";
-            mAKHOLabel.Size = new System.Drawing.Size(76, 19);
-            mAKHOLabel.TabIndex = 1;
-            mAKHOLabel.Text = "MAKHO:";
-            // 
-            // mACNLabel
-            // 
-            mACNLabel.AutoSize = true;
-            mACNLabel.Location = new System.Drawing.Point(106, 601);
-            mACNLabel.Name = "mACNLabel";
-            mACNLabel.Size = new System.Drawing.Size(63, 19);
-            mACNLabel.TabIndex = 3;
-            mACNLabel.Text = "MACN:";
-            // 
-            // tENKHOLabel
-            // 
-            tENKHOLabel.AutoSize = true;
-            tENKHOLabel.Location = new System.Drawing.Point(367, 548);
-            tENKHOLabel.Name = "tENKHOLabel";
-            tENKHOLabel.Size = new System.Drawing.Size(81, 19);
-            tENKHOLabel.TabIndex = 5;
-            tENKHOLabel.Text = "TENKHO:";
-            // 
-            // dIACHILabel
-            // 
-            dIACHILabel.AutoSize = true;
-            dIACHILabel.Location = new System.Drawing.Point(374, 601);
-            dIACHILabel.Name = "dIACHILabel";
-            dIACHILabel.Size = new System.Drawing.Size(70, 19);
-            dIACHILabel.TabIndex = 7;
-            dIACHILabel.Text = "DIACHI:";
             // 
             // barManager1
             // 
@@ -217,31 +181,31 @@ namespace QLVT_DATHANG
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1632, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(1213, 24);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 773);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 550);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1632, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1213, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 743);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 526);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1632, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(1213, 24);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 743);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 526);
             // 
             // barButtonItemHieuChinh
             // 
@@ -256,10 +220,10 @@ namespace QLVT_DATHANG
             this.panelControl1.Controls.Add(this.cmbChiNhanh);
             this.panelControl1.Controls.Add(this.labelChiNhanh);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 30);
+            this.panelControl1.Location = new System.Drawing.Point(0, 24);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(6);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1632, 145);
+            this.panelControl1.Size = new System.Drawing.Size(1213, 68);
             this.panelControl1.TabIndex = 5;
             // 
             // cmbChiNhanh
@@ -269,7 +233,7 @@ namespace QLVT_DATHANG
             this.cmbChiNhanh.Location = new System.Drawing.Point(188, 26);
             this.cmbChiNhanh.Margin = new System.Windows.Forms.Padding(6);
             this.cmbChiNhanh.Name = "cmbChiNhanh";
-            this.cmbChiNhanh.Size = new System.Drawing.Size(702, 24);
+            this.cmbChiNhanh.Size = new System.Drawing.Size(702, 21);
             this.cmbChiNhanh.TabIndex = 1;
             this.cmbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cmbChiNhanh_SelectedIndexChanged);
             // 
@@ -279,51 +243,9 @@ namespace QLVT_DATHANG
             this.labelChiNhanh.Location = new System.Drawing.Point(47, 29);
             this.labelChiNhanh.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelChiNhanh.Name = "labelChiNhanh";
-            this.labelChiNhanh.Size = new System.Drawing.Size(75, 17);
+            this.labelChiNhanh.Size = new System.Drawing.Size(59, 13);
             this.labelChiNhanh.TabIndex = 0;
             this.labelChiNhanh.Text = "Chi nhánh:";
-            // 
-            // panelNhapLieu
-            // 
-            this.panelNhapLieu.Controls.Add(this.panelControl2);
-            this.panelNhapLieu.Controls.Add(dIACHILabel);
-            this.panelNhapLieu.Controls.Add(this.txtDIACHI);
-            this.panelNhapLieu.Controls.Add(tENKHOLabel);
-            this.panelNhapLieu.Controls.Add(this.txtTENKHO);
-            this.panelNhapLieu.Controls.Add(mACNLabel);
-            this.panelNhapLieu.Controls.Add(this.txtMACN);
-            this.panelNhapLieu.Controls.Add(mAKHOLabel);
-            this.panelNhapLieu.Controls.Add(this.txtMAKHO);
-            this.panelNhapLieu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelNhapLieu.Enabled = false;
-            this.panelNhapLieu.Location = new System.Drawing.Point(0, 175);
-            this.panelNhapLieu.Name = "panelNhapLieu";
-            this.panelNhapLieu.Size = new System.Drawing.Size(1632, 598);
-            this.panelNhapLieu.TabIndex = 8;
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Controls.Add(this.gcKho);
-            this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1632, 529);
-            this.panelControl2.TabIndex = 9;
-            // 
-            // gcKho
-            // 
-            this.gcKho.DataSource = this.bdsKho;
-            this.gcKho.Dock = System.Windows.Forms.DockStyle.Top;
-            gridLevelNode1.RelationName = "Level1";
-            this.gcKho.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-            this.gcKho.Location = new System.Drawing.Point(2, 2);
-            this.gcKho.MainView = this.gridView1;
-            this.gcKho.MenuManager = this.barManager1;
-            this.gcKho.Name = "gcKho";
-            this.gcKho.Size = new System.Drawing.Size(1628, 525);
-            this.gcKho.TabIndex = 0;
-            this.gcKho.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
             // 
             // bdsKho
             // 
@@ -334,78 +256,6 @@ namespace QLVT_DATHANG
             // 
             this.DS.DataSetName = "DS";
             this.DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMAKHO,
-            this.colTENKHO,
-            this.colDIACHI,
-            this.colMACN});
-            this.gridView1.GridControl = this.gcKho;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            // 
-            // colMAKHO
-            // 
-            this.colMAKHO.FieldName = "MAKHO";
-            this.colMAKHO.Name = "colMAKHO";
-            this.colMAKHO.Visible = true;
-            this.colMAKHO.VisibleIndex = 0;
-            this.colMAKHO.Width = 82;
-            // 
-            // colTENKHO
-            // 
-            this.colTENKHO.FieldName = "TENKHO";
-            this.colTENKHO.Name = "colTENKHO";
-            this.colTENKHO.Visible = true;
-            this.colTENKHO.VisibleIndex = 1;
-            // 
-            // colDIACHI
-            // 
-            this.colDIACHI.FieldName = "DIACHI";
-            this.colDIACHI.Name = "colDIACHI";
-            this.colDIACHI.Visible = true;
-            this.colDIACHI.VisibleIndex = 2;
-            // 
-            // colMACN
-            // 
-            this.colMACN.FieldName = "MACN";
-            this.colMACN.Name = "colMACN";
-            this.colMACN.Visible = true;
-            this.colMACN.VisibleIndex = 3;
-            // 
-            // txtDIACHI
-            // 
-            this.txtDIACHI.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKho, "DIACHI", true));
-            this.txtDIACHI.Location = new System.Drawing.Point(434, 598);
-            this.txtDIACHI.Name = "txtDIACHI";
-            this.txtDIACHI.Size = new System.Drawing.Size(390, 26);
-            this.txtDIACHI.TabIndex = 8;
-            // 
-            // txtTENKHO
-            // 
-            this.txtTENKHO.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKho, "TENKHO", true));
-            this.txtTENKHO.Location = new System.Drawing.Point(434, 545);
-            this.txtTENKHO.Name = "txtTENKHO";
-            this.txtTENKHO.Size = new System.Drawing.Size(390, 26);
-            this.txtTENKHO.TabIndex = 6;
-            // 
-            // txtMACN
-            // 
-            this.txtMACN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKho, "MACN", true));
-            this.txtMACN.Location = new System.Drawing.Point(161, 598);
-            this.txtMACN.Name = "txtMACN";
-            this.txtMACN.Size = new System.Drawing.Size(157, 26);
-            this.txtMACN.TabIndex = 4;
-            // 
-            // txtMAKHO
-            // 
-            this.txtMAKHO.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKho, "MAKHO", true));
-            this.txtMAKHO.Location = new System.Drawing.Point(161, 545);
-            this.txtMAKHO.Name = "txtMAKHO";
-            this.txtMAKHO.Size = new System.Drawing.Size(157, 26);
-            this.txtMAKHO.TabIndex = 2;
             // 
             // khoTableAdapter
             // 
@@ -453,12 +303,162 @@ namespace QLVT_DATHANG
             // 
             this.datHangTableAdapter.ClearBeforeFill = true;
             // 
+            // panelNhapLieu
+            // 
+            this.panelNhapLieu.Controls.Add(this.txtMAKHO);
+            this.panelNhapLieu.Controls.Add(dIACHILabel);
+            this.panelNhapLieu.Controls.Add(mAKHOLabel);
+            this.panelNhapLieu.Controls.Add(this.txtDIACHI);
+            this.panelNhapLieu.Controls.Add(this.txtMACN);
+            this.panelNhapLieu.Controls.Add(tENKHOLabel);
+            this.panelNhapLieu.Controls.Add(mACNLabel);
+            this.panelNhapLieu.Controls.Add(this.txtTENKHO);
+            this.panelNhapLieu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelNhapLieu.Location = new System.Drawing.Point(0, 450);
+            this.panelNhapLieu.Name = "panelNhapLieu";
+            this.panelNhapLieu.Size = new System.Drawing.Size(1213, 100);
+            this.panelNhapLieu.TabIndex = 13;
+            // 
+            // txtMAKHO
+            // 
+            this.txtMAKHO.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKho, "MAKHO", true));
+            this.txtMAKHO.Location = new System.Drawing.Point(305, 17);
+            this.txtMAKHO.Name = "txtMAKHO";
+            this.txtMAKHO.Size = new System.Drawing.Size(157, 21);
+            this.txtMAKHO.TabIndex = 10;
+            // 
+            // dIACHILabel
+            // 
+            dIACHILabel.AutoSize = true;
+            dIACHILabel.Location = new System.Drawing.Point(527, 73);
+            dIACHILabel.Name = "dIACHILabel";
+            dIACHILabel.Size = new System.Drawing.Size(45, 13);
+            dIACHILabel.TabIndex = 15;
+            dIACHILabel.Text = "Địa Chỉ:";
+            // 
+            // mAKHOLabel
+            // 
+            mAKHOLabel.AutoSize = true;
+            mAKHOLabel.Location = new System.Drawing.Point(253, 20);
+            mAKHOLabel.Name = "mAKHOLabel";
+            mAKHOLabel.Size = new System.Drawing.Size(46, 13);
+            mAKHOLabel.TabIndex = 9;
+            mAKHOLabel.Text = "Mã Kho:";
+            // 
+            // txtDIACHI
+            // 
+            this.txtDIACHI.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKho, "DIACHI", true));
+            this.txtDIACHI.Location = new System.Drawing.Point(578, 70);
+            this.txtDIACHI.Name = "txtDIACHI";
+            this.txtDIACHI.Size = new System.Drawing.Size(390, 21);
+            this.txtDIACHI.TabIndex = 16;
+            // 
+            // txtMACN
+            // 
+            this.txtMACN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKho, "MACN", true));
+            this.txtMACN.Location = new System.Drawing.Point(305, 70);
+            this.txtMACN.Name = "txtMACN";
+            this.txtMACN.Size = new System.Drawing.Size(157, 21);
+            this.txtMACN.TabIndex = 12;
+            // 
+            // tENKHOLabel
+            // 
+            tENKHOLabel.AutoSize = true;
+            tENKHOLabel.Location = new System.Drawing.Point(522, 20);
+            tENKHOLabel.Name = "tENKHOLabel";
+            tENKHOLabel.Size = new System.Drawing.Size(50, 13);
+            tENKHOLabel.TabIndex = 13;
+            tENKHOLabel.Text = "Tên Kho:";
+            // 
+            // mACNLabel
+            // 
+            mACNLabel.AutoSize = true;
+            mACNLabel.Location = new System.Drawing.Point(257, 73);
+            mACNLabel.Name = "mACNLabel";
+            mACNLabel.Size = new System.Drawing.Size(42, 13);
+            mACNLabel.TabIndex = 11;
+            mACNLabel.Text = "Mã CN:";
+            // 
+            // txtTENKHO
+            // 
+            this.txtTENKHO.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKho, "TENKHO", true));
+            this.txtTENKHO.Location = new System.Drawing.Point(578, 17);
+            this.txtTENKHO.Name = "txtTENKHO";
+            this.txtTENKHO.Size = new System.Drawing.Size(390, 21);
+            this.txtTENKHO.TabIndex = 14;
+            // 
+            // panelControl3
+            // 
+            this.panelControl3.Controls.Add(this.gcKho);
+            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl3.Location = new System.Drawing.Point(0, 92);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(1213, 358);
+            this.panelControl3.TabIndex = 14;
+            // 
+            // gcKho
+            // 
+            this.gcKho.DataSource = this.bdsKho;
+            this.gcKho.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcKho.Location = new System.Drawing.Point(2, 2);
+            this.gcKho.MainView = this.gridView1;
+            this.gcKho.MenuManager = this.barManager1;
+            this.gcKho.Name = "gcKho";
+            this.gcKho.Size = new System.Drawing.Size(1209, 354);
+            this.gcKho.TabIndex = 0;
+            this.gcKho.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colMAKHO,
+            this.colTENKHO,
+            this.colDIACHI,
+            this.colMACN});
+            this.gridView1.GridControl = this.gcKho;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            // 
+            // colMAKHO
+            // 
+            this.colMAKHO.Caption = "Mã Kho";
+            this.colMAKHO.FieldName = "MAKHO";
+            this.colMAKHO.Name = "colMAKHO";
+            this.colMAKHO.Visible = true;
+            this.colMAKHO.VisibleIndex = 0;
+            // 
+            // colTENKHO
+            // 
+            this.colTENKHO.Caption = "Tên Kho";
+            this.colTENKHO.FieldName = "TENKHO";
+            this.colTENKHO.Name = "colTENKHO";
+            this.colTENKHO.Visible = true;
+            this.colTENKHO.VisibleIndex = 1;
+            // 
+            // colDIACHI
+            // 
+            this.colDIACHI.Caption = "Địa Chỉ";
+            this.colDIACHI.FieldName = "DIACHI";
+            this.colDIACHI.Name = "colDIACHI";
+            this.colDIACHI.Visible = true;
+            this.colDIACHI.VisibleIndex = 2;
+            // 
+            // colMACN
+            // 
+            this.colMACN.Caption = "Mã CN";
+            this.colMACN.FieldName = "MACN";
+            this.colMACN.Name = "colMACN";
+            this.colMACN.Visible = true;
+            this.colMACN.VisibleIndex = 3;
+            // 
             // FormKho
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1632, 773);
+            this.ClientSize = new System.Drawing.Size(1213, 550);
+            this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelNhapLieu);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.barDockControlLeft);
@@ -474,17 +474,18 @@ namespace QLVT_DATHANG
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            this.panelNhapLieu.ResumeLayout(false);
-            this.panelNhapLieu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gcKho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsKho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsPhieuXuat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsPhieuNhap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsDatHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelNhapLieu)).EndInit();
+            this.panelNhapLieu.ResumeLayout(false);
+            this.panelNhapLieu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            this.panelControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gcKho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -510,25 +511,25 @@ namespace QLVT_DATHANG
         private System.Windows.Forms.Label labelChiNhanh;
         private System.Windows.Forms.BindingSource bdsKho;
         private DS DS;
-        private System.Windows.Forms.Panel panelNhapLieu;
         private DSTableAdapters.KhoTableAdapter khoTableAdapter;
         private DSTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox txtDIACHI;
-        private System.Windows.Forms.TextBox txtTENKHO;
-        private System.Windows.Forms.TextBox txtMACN;
-        private System.Windows.Forms.TextBox txtMAKHO;
         private System.Windows.Forms.BindingSource bdsPhieuXuat;
         private DSTableAdapters.PhieuXuatTableAdapter phieuXuatTableAdapter;
         private System.Windows.Forms.BindingSource bdsPhieuNhap;
         private DSTableAdapters.PhieuNhapTableAdapter phieuNhapTableAdapter;
         private System.Windows.Forms.BindingSource bdsDatHang;
         private DSTableAdapters.DatHangTableAdapter datHangTableAdapter;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraGrid.GridControl gcKho;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colMAKHO;
         private DevExpress.XtraGrid.Columns.GridColumn colTENKHO;
         private DevExpress.XtraGrid.Columns.GridColumn colDIACHI;
         private DevExpress.XtraGrid.Columns.GridColumn colMACN;
+        private DevExpress.XtraEditors.PanelControl panelNhapLieu;
+        private System.Windows.Forms.TextBox txtMAKHO;
+        private System.Windows.Forms.TextBox txtDIACHI;
+        private System.Windows.Forms.TextBox txtMACN;
+        private System.Windows.Forms.TextBox txtTENKHO;
     }
 }

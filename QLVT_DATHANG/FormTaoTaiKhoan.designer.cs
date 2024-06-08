@@ -43,6 +43,7 @@ namespace QLVT_DATHANG
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.rdUser = new System.Windows.Forms.RadioButton();
             this.rdChiNhanh = new System.Windows.Forms.RadioButton();
+            this.labelCongTy = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaNV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass1.Properties)).BeginInit();
@@ -204,11 +205,23 @@ namespace QLVT_DATHANG
             this.rdChiNhanh.Text = "Chi Nhánh";
             this.rdChiNhanh.UseVisualStyleBackColor = true;
             // 
+            // labelCongTy
+            // 
+            this.labelCongTy.AutoSize = true;
+            this.labelCongTy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCongTy.Location = new System.Drawing.Point(306, 449);
+            this.labelCongTy.Name = "labelCongTy";
+            this.labelCongTy.Size = new System.Drawing.Size(61, 19);
+            this.labelCongTy.TabIndex = 31;
+            this.labelCongTy.Text = "Công Ty";
+            this.labelCongTy.Visible = false;
+            // 
             // FormTaoTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 565);
+            this.ClientSize = new System.Drawing.Size(800, 563);
+            this.Controls.Add(this.labelCongTy);
             this.Controls.Add(this.rdUser);
             this.Controls.Add(this.rdChiNhanh);
             this.Controls.Add(this.btnThoat);
@@ -225,6 +238,7 @@ namespace QLVT_DATHANG
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormTaoTaiKhoan";
             this.Text = "Tạo Tài Khoản";
+            this.Load += new System.EventHandler(this.FormTaoTaiKhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaNV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass1.Properties)).EndInit();
@@ -250,5 +264,6 @@ namespace QLVT_DATHANG
         private System.Windows.Forms.Button btnXacNhan;
         private System.Windows.Forms.RadioButton rdUser;
         private System.Windows.Forms.RadioButton rdChiNhanh;
+        private System.Windows.Forms.Label labelCongTy;
     }
 }

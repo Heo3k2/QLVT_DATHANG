@@ -24,6 +24,23 @@ namespace QLVT_DATHANG
             InitializeComponent();
         }
 
+        private void FormTaoTaiKhoan_Load(object sender, EventArgs e)
+        {
+            if (Program.role == "CONGTY")
+            {
+                vaiTro = "CONGTY";
+                rdChiNhanh.Checked = false;
+                rdChiNhanh.Visible = false;
+                rdUser.Visible = false;
+                labelCongTy.Visible = true;
+            }
+            else
+            {
+                rdChiNhanh.Enabled = true;
+                rdUser.Enabled = true;
+            }
+        }
+
         private bool kiemTraDuLieuDauVao()
         {
             if (txtMaNV.Text == "")
@@ -66,10 +83,11 @@ namespace QLVT_DATHANG
             bool ketQua = kiemTraDuLieuDauVao();
             if (ketQua == false) return;
 
-            taiKhoan = Program.hoTen;
+            taiKhoan = Program.maNhanVienDuocChon;
             matKhau = txtPass1.Text;
             maNhanVien = Program.maNhanVienDuocChon;
-            vaiTro = (rdChiNhanh.Checked == true) ? "CHINHANH" : "USER";
+            if (vaiTro != "CONGTY")
+                vaiTro = (rdChiNhanh.Checked == true) ? "CHINHANH" : "USER";
 
             Console.WriteLine(taiKhoan);
             Console.WriteLine(matKhau);
