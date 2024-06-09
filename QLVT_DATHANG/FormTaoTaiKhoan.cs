@@ -119,6 +119,8 @@ namespace QLVT_DATHANG
                 Console.WriteLine(ex.Message);
                 return;
             }
+
+            this.Dispose();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

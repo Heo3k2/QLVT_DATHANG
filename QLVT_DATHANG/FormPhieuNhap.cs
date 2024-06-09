@@ -526,7 +526,6 @@ namespace QLVT_DATHANG
                 return;
             }
             
-
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không ?", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 try

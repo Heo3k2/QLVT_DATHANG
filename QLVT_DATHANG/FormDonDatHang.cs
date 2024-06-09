@@ -91,7 +91,7 @@ namespace QLVT_DATHANG
             this.VatTuTableAdapter.Fill(this.DS.Vattu);
 
             //Combobox chọn chi nhánh
-            cmbChiNhanh.DataSource = Program.bindingSource; //sao chép bindingSource từ form đăng nhập
+            cmbChiNhanh.DataSource = Program.bindingSource;
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.brand;
@@ -103,8 +103,9 @@ namespace QLVT_DATHANG
             }
             else
             {
+                btnGhi.Enabled = true;
                 cmbChiNhanh.Enabled = false;
-                groupDatHang.Enabled = false;
+                groupDatHang.Enabled = true;
                 dgvCTDDH.Visible = false;
             }
         }
@@ -267,10 +268,17 @@ namespace QLVT_DATHANG
 
         private void btnGhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            String MaNV = ((DataRowView)bdsDatHang[bdsDatHang.Position])["MANV"].ToString();
             if (kiemTraDuLieu() == false)
                 return;
-
-            string maSoDDH = txtMaSoDDH.Text.Trim();
+            if (Program.userName != MaNV)
+            {
+                MessageBox.Show("Không thể chỉnh sửa phiếu của nhân viên khác", "Thông báo",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.datHangTableAdapter.Fill(this.DS.DatHang);
+                return;
+            }
+                string maSoDDH = txtMaSoDDH.Text.Trim();
 
             string cauTruyVan =
                     "DECLARE	@result int " +
@@ -321,7 +329,7 @@ namespace QLVT_DATHANG
 
                     this.btnThem.Enabled = true;
                     this.btnXoa.Enabled = true;
-                    this.btnGhi.Enabled = false;
+                    this.btnGhi.Enabled = true;
                     this.btnUndo.Enabled = true;
                     this.btnReload.Enabled = true;
                     this.btnCTDDH.Enabled = true;
@@ -397,6 +405,7 @@ namespace QLVT_DATHANG
         {
             dgvCTDDH.Visible = !dgvCTDDH.Visible;
             gcDatHang.Enabled = !dgvCTDDH.Visible;
+            groupDatHang.Enabled = !dgvCTDDH.Visible;
 
             btnThem.Enabled = btnXoa.Enabled = btnGhi.Enabled = btnUndo.Enabled = btnReload.Enabled = btnThoat.Enabled = !dgvCTDDH.Visible;
 
@@ -603,48 +612,71 @@ namespace QLVT_DATHANG
 
         private void btnGhiVT_Click(object sender, EventArgs e)
         {
-            if (dgvCTDDH.CurrentRow.Index < 0)
-                return;
-
-            if (!dgvCTDDH.EndEdit())
+            try
             {
-                return;
-            }
-
-            dgvCTDDH.CurrentCell = dgvCTDDH.CurrentRow.Cells[0];
-            dgvCTDDH.Focus();
-
-            if (kiemTraDuLieuVT() == false)
-            {
-                return;
-            }
-
-            {
-                try
+                // Kiểm tra nếu không có hàng hiện tại được chọn
+                if (dgvCTDDH.CurrentRow == null || dgvCTDDH.CurrentRow.Index < 0)
                 {
-                    this.dgvCTDDH.EndEdit();
+                    MessageBox.Show("Không có hàng nào được chọn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Kết thúc chế độ chỉnh sửa hiện tại
+                if (!dgvCTDDH.EndEdit())
+                {
+                    MessageBox.Show("Kết thúc chế độ chỉnh sửa thất bại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                dgvCTDDH.CurrentCell = dgvCTDDH.CurrentRow.Cells[0];
+                dgvCTDDH.Focus();
+
+                // Kiểm tra dữ liệu hợp lệ
+                if (!kiemTraDuLieuVT())
+                {
+                    MessageBox.Show("Dữ liệu không hợp lệ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                try {
+                    // Lưu lại vị trí hiện tại
+                    int currentRowIndex = dgvCTDDH.CurrentRow.Index;
+
+                    // Thử ghi dữ liệu vào CSDL
+                    this.bdsCTDDH.EndEdit();
                     this.CTDDHTableAdapter.Update(this.DS.CTDDH);
                     this.CTDDHTableAdapter.Fill(this.DS.CTDDH);
+
+                    // Khôi phục lại vị trí của row
+                    if (currentRowIndex >= 0 && currentRowIndex < dgvCTDDH.Rows.Count)
+                    {
+                        dgvCTDDH.CurrentCell = dgvCTDDH.Rows[currentRowIndex].Cells[0];
+                    }
+
                     MessageBox.Show("Ghi thành công", "Thông báo", MessageBoxButtons.OK);
                     dangThemMoi = false;
-
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.Message);
-                    bdsCTDDH.RemoveCurrent();
-                    MessageBox.Show("Ghi thất bại!\n\n" + ex.Message, "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Console.WriteLine("Chi tiết lỗi: " + ex.ToString());
+                    MessageBox.Show("Ghi thất bại!\n\n" + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
+                // Đặt tất cả các hàng thành chỉ đọc
+                foreach (DataGridViewRow row in dgvCTDDH.Rows)
+                    row.ReadOnly = true;
+
+                // Cập nhật trạng thái các nút
+                btnThemVT.Enabled = true;
+                btnSuaVT.Enabled = true;
+                btnXoaVT.Enabled = true;
+                btnGhiVT.Enabled = false;
             }
-
-            foreach (DataGridViewRow row in dgvCTDDH.Rows)
-                row.ReadOnly = true;
-
-            btnThemVT.Enabled = true;
-            btnSuaVT.Enabled = true;
-            btnXoaVT.Enabled = true;
-            btnGhiVT.Enabled = false;
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnChonMaKho_Click(object sender, EventArgs e)

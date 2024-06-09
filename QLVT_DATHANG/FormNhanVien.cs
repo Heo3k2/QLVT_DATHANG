@@ -263,7 +263,7 @@ namespace QLVT_DATHANG
                 return false;
             }
 
-            int luong = int.Parse(txtLuong.Text.Replace(".", ""));
+            int luong = int.Parse(txtLuong.Text.Replace(",", ""));
             if (luong < 4000000)
             {
                 MessageBox.Show("Mức lương phải lớn hơn hoặc bằng 4.000.000", "Thông báo", MessageBoxButtons.OK);
