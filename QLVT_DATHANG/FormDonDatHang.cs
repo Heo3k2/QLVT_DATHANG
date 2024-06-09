@@ -98,8 +98,10 @@ namespace QLVT_DATHANG
 
             if (Program.role == "CONGTY")
             {
-                btnThem.Enabled = btnGhi.Enabled = btnXoa.Enabled = btnUndo.Enabled = false;
+                btnThem.Enabled = btnGhi.Enabled = btnXoa.Enabled = btnUndo.Enabled = btnCTDDH.Enabled = false;
+                groupDatHang.Enabled = false;
                 contextMenuStrip1.Enabled = false;
+                dgvCTDDH.ReadOnly = true;
             }
             else
             {
