@@ -573,7 +573,7 @@ namespace QLVT_DATHANG
                 try
                 {
                     capNhatSoLuongVatTu("NHAP", dgvCTPN.CurrentRow.Cells["MAVT"].Value.ToString(), int.Parse(dgvCTPN.CurrentRow.Cells["SOLUONG"].Value.ToString()));
-                    this.dgvCTPN.EndEdit();
+                    this.bdsCTPN.EndEdit();
                     this.CTPNTableAdapter.Update(this.DS.CTPN);
                     this.CTPNTableAdapter.Fill(this.DS.CTPN);
                     MessageBox.Show("Ghi thành công", "Thông báo", MessageBoxButtons.OK);
