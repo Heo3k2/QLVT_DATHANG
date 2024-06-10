@@ -220,7 +220,9 @@ namespace QLVT_DATHANG.Reports
             this.tableCell1.StyleName = "DetailCaption1";
             this.tableCell1.StylePriority.UseBorderColor = false;
             this.tableCell1.StylePriority.UseBorders = false;
+            this.tableCell1.StylePriority.UseTextAlignment = false;
             this.tableCell1.Text = "MSĐĐH";
+            this.tableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell1.Weight = 0.0766102675076297D;
             // 
             // tableCell2
@@ -233,7 +235,9 @@ namespace QLVT_DATHANG.Reports
             this.tableCell2.StyleName = "DetailCaption1";
             this.tableCell2.StylePriority.UseBorderColor = false;
             this.tableCell2.StylePriority.UseBorders = false;
+            this.tableCell2.StylePriority.UseTextAlignment = false;
             this.tableCell2.Text = "NGÀY";
+            this.tableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell2.Weight = 0.07879626210588489D;
             // 
             // tableCell3
@@ -246,7 +250,9 @@ namespace QLVT_DATHANG.Reports
             this.tableCell3.StyleName = "DetailCaption1";
             this.tableCell3.StylePriority.UseBorderColor = false;
             this.tableCell3.StylePriority.UseBorders = false;
+            this.tableCell3.StylePriority.UseTextAlignment = false;
             this.tableCell3.Text = "NHÀ CUNG CẤP";
+            this.tableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell3.Weight = 0.20624632396149881D;
             // 
             // tableCell4
@@ -259,7 +265,9 @@ namespace QLVT_DATHANG.Reports
             this.tableCell4.StyleName = "DetailCaption1";
             this.tableCell4.StylePriority.UseBorderColor = false;
             this.tableCell4.StylePriority.UseBorders = false;
+            this.tableCell4.StylePriority.UseTextAlignment = false;
             this.tableCell4.Text = "HỌ TÊN";
+            this.tableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell4.Weight = 0.18698491448836949D;
             // 
             // tableCell5
@@ -272,7 +280,9 @@ namespace QLVT_DATHANG.Reports
             this.tableCell5.StyleName = "DetailCaption1";
             this.tableCell5.StylePriority.UseBorderColor = false;
             this.tableCell5.StylePriority.UseBorders = false;
+            this.tableCell5.StylePriority.UseTextAlignment = false;
             this.tableCell5.Text = "TÊN VẬT TƯ";
+            this.tableCell5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell5.Weight = 0.24307515672702659D;
             // 
             // tableCell6
@@ -287,7 +297,7 @@ namespace QLVT_DATHANG.Reports
             this.tableCell6.StylePriority.UseBorders = false;
             this.tableCell6.StylePriority.UseTextAlignment = false;
             this.tableCell6.Text = "SỐ LƯỢNG";
-            this.tableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.tableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell6.Weight = 0.092139651291400088D;
             // 
             // tableCell7
@@ -302,7 +312,7 @@ namespace QLVT_DATHANG.Reports
             this.tableCell7.StylePriority.UseBorders = false;
             this.tableCell7.StylePriority.UseTextAlignment = false;
             this.tableCell7.Text = "ĐƠN GIÁ";
-            this.tableCell7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.tableCell7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell7.Weight = 0.11614736880388529D;
             // 
             // Detail

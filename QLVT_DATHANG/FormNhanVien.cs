@@ -279,6 +279,12 @@ namespace QLVT_DATHANG
         {
             viTri = bdsNhanVien.Position;
 
+            if((bool)((DataRowView)bdsNhanVien[viTri])["TrangThaiXoa"] == true)
+            {
+                MessageBox.Show("Nhân viên đã bị xóa không thể chỉnh sửa!", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }    
+
             if (kiemTraNhapLieu() == false)
             {
                 return;
@@ -354,26 +360,26 @@ namespace QLVT_DATHANG
             }
 
             Program.myReader.Read();
-            int result = int.Parse(Program.myReader.GetValue(0).ToString());
+            String result = Program.myReader.GetValue(0).ToString();
             Program.myReader.Close();
 
             int viTriConTro = bdsNhanVien.Position;
             int viTriMaNV = bdsNhanVien.Find("MANV", txtMaNV.Text);
             int viTriCMNDNV = bdsNhanVien.Find("SOCMND", cmndMoi);
 
-            if(result == 1 && viTriConTro != viTriMaNV)
+            if(result.Contains("1") && viTriConTro != viTriMaNV)
             {
                 MessageBox.Show("Mã nhân viên này đã tồn tại!", "Thông báo", MessageBoxButtons.OK);
                 txtMaNV.Focus();
                 return;
             }
-            else if(result == 2 && viTriConTro != viTriCMNDNV) //Bắt lỗi cmnd khi thêm
+            else if(result.Contains("2") && viTriConTro != viTriCMNDNV) //Bắt lỗi cmnd khi thêm
             {
                 MessageBox.Show("CMND này đã tồn tại!", "Thông báo", MessageBoxButtons.OK);
                 txtSoCMND.Focus();
                 return;
             }
-            else if (result == 2 && viTriMaNV != viTriCMNDNV) //Bắt lỗi cmnd khi sửa
+            else if (result.Contains("2") && viTriMaNV != viTriCMNDNV) //Bắt lỗi cmnd khi sửa
             {
                 MessageBox.Show("CMND này đã tồn tại!", "Thông báo", MessageBoxButtons.OK);
                 txtSoCMND.Focus();
@@ -469,7 +475,7 @@ namespace QLVT_DATHANG
             {
                 try
                 {
-                    /*xoaLogin(txtMaNV.Text, txtMaNV.Text)*/;
+                    xoaLogin(txtMaNV.Text, txtMaNV.Text);
                     bdsNhanVien.RemoveCurrent();
                     this.NhanVienTableAdapter.Connection.ConnectionString = Program.connstr;                   
                     this.NhanVienTableAdapter.Update(this.DS.NhanVien);
@@ -493,6 +499,12 @@ namespace QLVT_DATHANG
 
         private void barButtonItemPhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (undoList.Count == 0)
+            {
+                MessageBox.Show("Không còn lệnh để phục hồi!", "Thông báo", MessageBoxButtons.OK);
+                barButtonItemPhucHoi.Enabled = false;
+                return;
+            }
 
             if (dangThemMoi == true && barButtonItemThem.Enabled == false)
             {
@@ -621,7 +633,7 @@ namespace QLVT_DATHANG
             }
         }
 
-        private void chuyenChiNhanh(string maChiNhanhHienTai, string soCMND)
+        private void chuyenChiNhanh(string maChiNhanhHienTai, string soCMND, string manv, string ho, string ten, string diaChi, DateTime ngaySinh, string luong)
         {
             string maChiNhanhMoi;
             if(maChiNhanhHienTai.Equals("CN1"))
@@ -637,10 +649,10 @@ namespace QLVT_DATHANG
                 Program.serverNameLeft = "MSI\\SERVER1";
             }
 
-            string cauTruyVanHoanTac = "EXEC sp_chuyenChiNhanh '" + soCMND + "', '" + maChiNhanhHienTai + "'";
+            string cauTruyVanHoanTac = "EXEC sp_chuyenChiNhanh '" + soCMND + "', '" + maChiNhanhHienTai + "', " + manv + ", N'" + ho + "', N'" + ten + "', N'" + diaChi + "', '" + ngaySinh.ToString("yyyy-MM-dd") + "', '" + luong + "'";
             undoList.Push(cauTruyVanHoanTac);
             Console.WriteLine(cauTruyVanHoanTac);
-            string cauTruyVan = "EXEC sp_chuyenChiNhanh '" + soCMND + "', '" + maChiNhanhMoi + "'";
+            string cauTruyVan = "EXEC sp_chuyenChiNhanh '" + soCMND + "', '" + maChiNhanhMoi + "', " + manv + ", N'" + ho + "', N'" + ten + "', N'" + diaChi + "', '" + ngaySinh.ToString("yyyy-MM-dd") + "', '" + luong + "'";
             SqlCommand sqlCommand = new SqlCommand(cauTruyVan, Program.conn);
 
             Console.WriteLine("Câu truy vấn: " + cauTruyVan);
@@ -675,13 +687,16 @@ namespace QLVT_DATHANG
         {
             int viTriHienTai = bdsNhanVien.Position;
             int trangThai = 0;
-            if(((DataRowView)(bdsNhanVien[viTriHienTai]))["TrangThaiXoa"].ToString().Equals("True"))
+            DataRowView drv = ((DataRowView)bdsNhanVien[viTriHienTai]);
+            if (drv["TrangThaiXoa"].ToString().Equals("True"))
             {
                 trangThai = 1;
             }    
-            string maNhanVien = ((DataRowView)(bdsNhanVien[viTriHienTai]))["MANV"].ToString().Trim();
-            string soCMND = ((DataRowView)(bdsNhanVien[viTriHienTai]))["SOCMND"].ToString().Trim();
-            string maChiNhanhHienTai = ((DataRowView)(bdsNhanVien[viTriHienTai]))["MACN"].ToString().Trim();
+
+
+            string maNhanVien = drv["MANV"].ToString().Trim();
+            string soCMND = drv["SOCMND"].ToString().Trim();
+            string maChiNhanhHienTai = drv["MACN"].ToString().Trim();
             Console.WriteLine(maNhanVien + " " + soCMND + " " + maChiNhanhHienTai);
             if (maNhanVien == Program.userName)
             {
@@ -698,7 +713,12 @@ namespace QLVT_DATHANG
             DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn chuyển chi nhánh nhân viên này không?", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if(dialogResult == DialogResult.OK)
             {
-                chuyenChiNhanh(maChiNhanhHienTai, soCMND);
+                String ho = drv["HO"].ToString().Trim();
+                String ten = drv["TEN"].ToString().Trim();
+                String diaChi = drv["DIACHI"].ToString().Trim();
+                DateTime ngaySinh = ((DateTime)drv["NGAYSINH"]);
+                String luong = drv["LUONG"].ToString().Trim();
+                chuyenChiNhanh(maChiNhanhHienTai, soCMND, maNhanVien, ho, ten, diaChi, ngaySinh, luong);
             }    
             else
             {
