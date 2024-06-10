@@ -430,9 +430,9 @@ namespace QLVT_DATHANG
             }
         }
 
-        private void xoaLogin(string loginname, string username) 
+        private void xoaLogin(int maNv) 
         {
-            string cauTruyVan = "Exec sp_Xoa_Login '" + loginname + "', '" + username + "'"; 
+            string cauTruyVan = "Exec sp_Xoa_Login '" + maNv + "'";
             if (Program.KetNoi() == 0)
             {
                 return;
@@ -475,7 +475,7 @@ namespace QLVT_DATHANG
             {
                 try
                 {
-                    xoaLogin(txtMaNV.Text, txtMaNV.Text);
+                    xoaLogin(maNhanVien);
                     bdsNhanVien.RemoveCurrent();
                     this.NhanVienTableAdapter.Connection.ConnectionString = Program.connstr;                   
                     this.NhanVienTableAdapter.Update(this.DS.NhanVien);
