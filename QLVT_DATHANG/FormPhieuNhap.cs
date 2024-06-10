@@ -632,7 +632,16 @@ namespace QLVT_DATHANG
 
             undoList.Clear();
 
-            btnThem.Enabled = btnXoa.Enabled = btnGhi.Enabled = btnUndo.Enabled = btnReload.Enabled = btnThoat.Enabled = !dgvCTPN.Visible;
+            if(Program.role != "CONGTY")
+            {
+                btnThem.Enabled = btnXoa.Enabled = btnGhi.Enabled = btnUndo.Enabled = !dgvCTPN.Visible;
+            }
+            else
+            {
+                cmbChiNhanh.Enabled = !dgvCTPN.Visible;
+            }
+            
+            btnReload.Enabled = btnThoat.Enabled = !dgvCTPN.Visible;
 
             btnThemVT.Enabled = btnSuaVT.Enabled = btnXoaVT.Enabled = true;
             btnGhiVT.Enabled = false;
