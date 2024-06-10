@@ -14,7 +14,7 @@ namespace QLVT_DATHANG.Reports
 
         public static string Convert(string number)
         {
-            number = number.Replace(",", "");
+            number = number.Replace(".", "");
             number = number.Replace(" đồng", "");
             if (!long.TryParse(number, out long numericValue))
                 return "";

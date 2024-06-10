@@ -448,6 +448,7 @@ namespace QLVT_DATHANG
             this.colTrangThaiXoa});
             this.gridView1.GridControl = this.gcNV;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             // 
             // colMANV
             // 

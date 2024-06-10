@@ -199,7 +199,7 @@ namespace QLVT_DATHANG
         {
             if (txtMaPX.Text == "")
             {
-                MessageBox.Show("Không được bỏ trống mã phiếu nhập!", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Không được bỏ trống mã phiếu xuất!", "Thông báo", MessageBoxButtons.OK);
                 txtMaPX.Focus();
                 return false;
             }
@@ -395,13 +395,13 @@ namespace QLVT_DATHANG
 
             if (Program.userName != maPX)
             {
-                MessageBox.Show("Không thể xóa phiếu nhập của nhân viên khác!", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Không thể xóa phiếu xuất của nhân viên khác!", "Thông báo", MessageBoxButtons.OK);
                 return;
             }
 
             if (bdsCTPX.Count > 0)
             {
-                MessageBox.Show("Không thể xóa phiếu nhập vì đã có chi tiết phiếu nhập!", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Không thể xóa phiếu xuất vì đã có chi tiết phiếu xuất!", "Thông báo", MessageBoxButtons.OK);
                 return;
             }
 
@@ -434,7 +434,7 @@ namespace QLVT_DATHANG
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi xóa phiếu nhập! Hãy thử lại!\n" + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Lỗi xóa phiếu xuất! Hãy thử lại!\n" + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     this.PXTableAdapter.Connection.ConnectionString = Program.connstr;
                     this.PXTableAdapter.Fill(this.DS.PhieuXuat);
@@ -527,7 +527,7 @@ namespace QLVT_DATHANG
             String MaNV = ((DataRowView)bdsPX[bdsPX.Position])["MANV"].ToString();
             if (Program.userName != MaNV)
             {
-                MessageBox.Show("Không thêm chi tiết phiếu nhập trên phiếu không phải do mình tạo", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Không thêm chi tiết phiếu xuất trên phiếu không phải do mình tạo", "Thông báo", MessageBoxButtons.OK);
                 return;
             }
 
@@ -571,7 +571,7 @@ namespace QLVT_DATHANG
             String MaNV = ((DataRowView)bdsPX[bdsPX.Position])["MANV"].ToString();
             if (Program.userName != MaNV)
             {
-                MessageBox.Show("Không xóa chi tiết phiếu nhập trên phiếu không phải do mình tạo", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Không xóa chi tiết phiếu xuất trên phiếu không phải do mình tạo", "Thông báo", MessageBoxButtons.OK);
                 return;
             }
 
@@ -590,7 +590,7 @@ namespace QLVT_DATHANG
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi xóa chi tiết phiếu nhập!. Hãy thử lại\n\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
+                    MessageBox.Show("Lỗi xóa chi tiết phiếu xuất!. Hãy thử lại\n\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
 
                     this.CTPXTableAdapter.Connection.ConnectionString = Program.connstr;
                     this.CTPXTableAdapter.Fill(this.DS.CTPX);
@@ -617,7 +617,7 @@ namespace QLVT_DATHANG
                     if (row.Cells["MAVT"].Value.ToString().Equals(dgvCTPX.Rows[viTri].Cells["MAVT"].Value.ToString()))
                     {
                         // Nếu tìm thấy giá trị giống nhau, hủy thay đổi và thông báo
-                        MessageBox.Show("Đã tồn tại tên vật tư trong chi tiết phiếu nhập này rồi!", "Thông báo", MessageBoxButtons.OK);
+                        MessageBox.Show("Đã tồn tại tên vật tư trong chi tiết phiếu xuất này rồi!", "Thông báo", MessageBoxButtons.OK);
                         dgvCTPX.CurrentCell = dgvCTPX.Rows[viTri].Cells[1];
                         dgvCTPX.Focus();
                         return false;

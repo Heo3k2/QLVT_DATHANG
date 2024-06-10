@@ -225,6 +225,7 @@ namespace QLVT_DATHANG
             if (bdsPhieuNhap.Count > 0)
             {
                 MessageBox.Show("Không thể xoá đơn đặt hàng vì đã có phiếu nhập!", "Thông báo", MessageBoxButtons.OK);
+                return;
             }
 
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)

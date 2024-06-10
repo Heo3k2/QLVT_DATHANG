@@ -286,6 +286,7 @@ namespace QLVT_DATHANG
             this.colSOLUONGTON});
             this.gridView1.GridControl = this.gcVatTu;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             // 
             // colMAVT
             // 

@@ -30,11 +30,11 @@ namespace QLVT_DATHANG
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKho));
             System.Windows.Forms.Label dIACHILabel;
             System.Windows.Forms.Label mAKHOLabel;
             System.Windows.Forms.Label tENKHOLabel;
             System.Windows.Forms.Label mACNLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKho));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.barButtonItemThem = new DevExpress.XtraBars.BarButtonItem();
@@ -92,6 +92,42 @@ namespace QLVT_DATHANG
             ((System.ComponentModel.ISupportInitialize)(this.gcKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dIACHILabel
+            // 
+            dIACHILabel.AutoSize = true;
+            dIACHILabel.Location = new System.Drawing.Point(513, 76);
+            dIACHILabel.Name = "dIACHILabel";
+            dIACHILabel.Size = new System.Drawing.Size(55, 17);
+            dIACHILabel.TabIndex = 15;
+            dIACHILabel.Text = "Địa Chỉ:";
+            // 
+            // mAKHOLabel
+            // 
+            mAKHOLabel.AutoSize = true;
+            mAKHOLabel.Location = new System.Drawing.Point(239, 23);
+            mAKHOLabel.Name = "mAKHOLabel";
+            mAKHOLabel.Size = new System.Drawing.Size(58, 17);
+            mAKHOLabel.TabIndex = 9;
+            mAKHOLabel.Text = "Mã Kho:";
+            // 
+            // tENKHOLabel
+            // 
+            tENKHOLabel.AutoSize = true;
+            tENKHOLabel.Location = new System.Drawing.Point(508, 23);
+            tENKHOLabel.Name = "tENKHOLabel";
+            tENKHOLabel.Size = new System.Drawing.Size(64, 17);
+            tENKHOLabel.TabIndex = 13;
+            tENKHOLabel.Text = "Tên Kho:";
+            // 
+            // mACNLabel
+            // 
+            mACNLabel.AutoSize = true;
+            mACNLabel.Location = new System.Drawing.Point(243, 76);
+            mACNLabel.Name = "mACNLabel";
+            mACNLabel.Size = new System.Drawing.Size(52, 17);
+            mACNLabel.TabIndex = 11;
+            mACNLabel.Text = "Mã CN:";
             // 
             // barManager1
             // 
@@ -181,7 +217,7 @@ namespace QLVT_DATHANG
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1213, 24);
+            this.barDockControlTop.Size = new System.Drawing.Size(1213, 30);
             // 
             // barDockControlBottom
             // 
@@ -195,17 +231,17 @@ namespace QLVT_DATHANG
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 526);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 520);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1213, 24);
+            this.barDockControlRight.Location = new System.Drawing.Point(1213, 30);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 526);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 520);
             // 
             // barButtonItemHieuChinh
             // 
@@ -220,7 +256,7 @@ namespace QLVT_DATHANG
             this.panelControl1.Controls.Add(this.cmbChiNhanh);
             this.panelControl1.Controls.Add(this.labelChiNhanh);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 24);
+            this.panelControl1.Location = new System.Drawing.Point(0, 30);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(6);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1213, 68);
@@ -233,7 +269,7 @@ namespace QLVT_DATHANG
             this.cmbChiNhanh.Location = new System.Drawing.Point(188, 26);
             this.cmbChiNhanh.Margin = new System.Windows.Forms.Padding(6);
             this.cmbChiNhanh.Name = "cmbChiNhanh";
-            this.cmbChiNhanh.Size = new System.Drawing.Size(702, 21);
+            this.cmbChiNhanh.Size = new System.Drawing.Size(702, 24);
             this.cmbChiNhanh.TabIndex = 1;
             this.cmbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cmbChiNhanh_SelectedIndexChanged);
             // 
@@ -243,7 +279,7 @@ namespace QLVT_DATHANG
             this.labelChiNhanh.Location = new System.Drawing.Point(47, 29);
             this.labelChiNhanh.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelChiNhanh.Name = "labelChiNhanh";
-            this.labelChiNhanh.Size = new System.Drawing.Size(59, 13);
+            this.labelChiNhanh.Size = new System.Drawing.Size(75, 17);
             this.labelChiNhanh.TabIndex = 0;
             this.labelChiNhanh.Text = "Chi nhánh:";
             // 
@@ -314,9 +350,9 @@ namespace QLVT_DATHANG
             this.panelNhapLieu.Controls.Add(mACNLabel);
             this.panelNhapLieu.Controls.Add(this.txtTENKHO);
             this.panelNhapLieu.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelNhapLieu.Location = new System.Drawing.Point(0, 450);
+            this.panelNhapLieu.Location = new System.Drawing.Point(0, 417);
             this.panelNhapLieu.Name = "panelNhapLieu";
-            this.panelNhapLieu.Size = new System.Drawing.Size(1213, 100);
+            this.panelNhapLieu.Size = new System.Drawing.Size(1213, 133);
             this.panelNhapLieu.TabIndex = 13;
             // 
             // txtMAKHO
@@ -324,33 +360,15 @@ namespace QLVT_DATHANG
             this.txtMAKHO.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKho, "MAKHO", true));
             this.txtMAKHO.Location = new System.Drawing.Point(305, 17);
             this.txtMAKHO.Name = "txtMAKHO";
-            this.txtMAKHO.Size = new System.Drawing.Size(157, 21);
+            this.txtMAKHO.Size = new System.Drawing.Size(157, 23);
             this.txtMAKHO.TabIndex = 10;
-            // 
-            // dIACHILabel
-            // 
-            dIACHILabel.AutoSize = true;
-            dIACHILabel.Location = new System.Drawing.Point(527, 73);
-            dIACHILabel.Name = "dIACHILabel";
-            dIACHILabel.Size = new System.Drawing.Size(45, 13);
-            dIACHILabel.TabIndex = 15;
-            dIACHILabel.Text = "Địa Chỉ:";
-            // 
-            // mAKHOLabel
-            // 
-            mAKHOLabel.AutoSize = true;
-            mAKHOLabel.Location = new System.Drawing.Point(253, 20);
-            mAKHOLabel.Name = "mAKHOLabel";
-            mAKHOLabel.Size = new System.Drawing.Size(46, 13);
-            mAKHOLabel.TabIndex = 9;
-            mAKHOLabel.Text = "Mã Kho:";
             // 
             // txtDIACHI
             // 
             this.txtDIACHI.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKho, "DIACHI", true));
             this.txtDIACHI.Location = new System.Drawing.Point(578, 70);
             this.txtDIACHI.Name = "txtDIACHI";
-            this.txtDIACHI.Size = new System.Drawing.Size(390, 21);
+            this.txtDIACHI.Size = new System.Drawing.Size(390, 23);
             this.txtDIACHI.TabIndex = 16;
             // 
             // txtMACN
@@ -358,42 +376,24 @@ namespace QLVT_DATHANG
             this.txtMACN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKho, "MACN", true));
             this.txtMACN.Location = new System.Drawing.Point(305, 70);
             this.txtMACN.Name = "txtMACN";
-            this.txtMACN.Size = new System.Drawing.Size(157, 21);
+            this.txtMACN.Size = new System.Drawing.Size(157, 23);
             this.txtMACN.TabIndex = 12;
-            // 
-            // tENKHOLabel
-            // 
-            tENKHOLabel.AutoSize = true;
-            tENKHOLabel.Location = new System.Drawing.Point(522, 20);
-            tENKHOLabel.Name = "tENKHOLabel";
-            tENKHOLabel.Size = new System.Drawing.Size(50, 13);
-            tENKHOLabel.TabIndex = 13;
-            tENKHOLabel.Text = "Tên Kho:";
-            // 
-            // mACNLabel
-            // 
-            mACNLabel.AutoSize = true;
-            mACNLabel.Location = new System.Drawing.Point(257, 73);
-            mACNLabel.Name = "mACNLabel";
-            mACNLabel.Size = new System.Drawing.Size(42, 13);
-            mACNLabel.TabIndex = 11;
-            mACNLabel.Text = "Mã CN:";
             // 
             // txtTENKHO
             // 
             this.txtTENKHO.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKho, "TENKHO", true));
             this.txtTENKHO.Location = new System.Drawing.Point(578, 17);
             this.txtTENKHO.Name = "txtTENKHO";
-            this.txtTENKHO.Size = new System.Drawing.Size(390, 21);
+            this.txtTENKHO.Size = new System.Drawing.Size(390, 23);
             this.txtTENKHO.TabIndex = 14;
             // 
             // panelControl3
             // 
             this.panelControl3.Controls.Add(this.gcKho);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl3.Location = new System.Drawing.Point(0, 92);
+            this.panelControl3.Location = new System.Drawing.Point(0, 98);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1213, 358);
+            this.panelControl3.Size = new System.Drawing.Size(1213, 319);
             this.panelControl3.TabIndex = 14;
             // 
             // gcKho
@@ -404,7 +404,7 @@ namespace QLVT_DATHANG
             this.gcKho.MainView = this.gridView1;
             this.gcKho.MenuManager = this.barManager1;
             this.gcKho.Name = "gcKho";
-            this.gcKho.Size = new System.Drawing.Size(1209, 354);
+            this.gcKho.Size = new System.Drawing.Size(1209, 315);
             this.gcKho.TabIndex = 0;
             this.gcKho.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -419,6 +419,7 @@ namespace QLVT_DATHANG
             this.gridView1.GridControl = this.gcKho;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             // 
             // colMAKHO
             // 
@@ -427,6 +428,7 @@ namespace QLVT_DATHANG
             this.colMAKHO.Name = "colMAKHO";
             this.colMAKHO.Visible = true;
             this.colMAKHO.VisibleIndex = 0;
+            this.colMAKHO.Width = 82;
             // 
             // colTENKHO
             // 
@@ -454,7 +456,7 @@ namespace QLVT_DATHANG
             // 
             // FormKho
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1213, 550);

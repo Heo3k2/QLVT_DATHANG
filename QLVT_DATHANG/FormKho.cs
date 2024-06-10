@@ -84,12 +84,12 @@ namespace QLVT_DATHANG
                 return false;
             }
 
-            if (Regex.IsMatch(txtTENKHO.Text, @"^[a-zA-Z0-9 ]+$") == false)
+/*            if (Regex.IsMatch(txtTENKHO.Text, @"^[a-zA-Z0-9 ]+$") == false)
             {
                 MessageBox.Show("Mã kho chỉ chấp nhận chữ cái, số và khoảng trắng", "Thông báo", MessageBoxButtons.OK);
                 txtTENKHO.Focus();
                 return false;
-            }
+            }*/
 
             if (txtTENKHO.Text.Length > 30)
             {
@@ -105,12 +105,12 @@ namespace QLVT_DATHANG
                 return false;
             }
 
-            if (Regex.IsMatch(txtDIACHI.Text, @"^[a-zA-Z0-9, ]+$") == false)
+/*            if (Regex.IsMatch(txtDIACHI.Text, @"^[a-zA-Z0-9, ]+$") == false)
             {
                 MessageBox.Show("Địa chỉ chỉ gồm chữ cái, số và khoảng trắng", "Thông báo", MessageBoxButtons.OK);
                 txtDIACHI.Focus();
                 return false;
-            }
+            }*/
 
             if (txtDIACHI.Text.Length > 100)
             {
@@ -298,7 +298,7 @@ namespace QLVT_DATHANG
             bool ketQua = kiemTraDuLieuDauVao();
             if (ketQua == false)
                 return;
-
+            txtDIACHI.Focus();
             /*Step 1*/
             /*Lay du lieu truoc khi chon btnGHI - phuc vu btnHOANTAC*/
             String maKhoHang = txtMAKHO.Text.Trim();// Trim() de loai bo khoang trang thua
@@ -407,7 +407,7 @@ namespace QLVT_DATHANG
                     {
                         Console.WriteLine(ex.Message);
                         bdsKho.RemoveCurrent();
-                        MessageBox.Show("Tên vật tư có thể đã được dùng !\n\n" + ex.Message, "Lỗi",
+                        MessageBox.Show("Tên kho có thể đã được dùng !\n\n" + ex.Message, "Lỗi",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }

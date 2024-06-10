@@ -435,6 +435,7 @@ namespace QLVT_DATHANG
             this.gridView1.GridControl = this.gcPN;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             // 
             // colMAPN
             // 

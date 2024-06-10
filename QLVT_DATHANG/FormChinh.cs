@@ -108,6 +108,7 @@ namespace QLVT_DATHANG
             barButtonItemDangXuat.Enabled = false;
             ribbonPageNhapXuat.Visible = false;
             ribbonPageBaoCao.Visible = false;
+            barButtonItemTaoTaiKhoan.Enabled = false;
 
             Form f = this.CheckExists(typeof(FormDangNhap));
             if(f != null)

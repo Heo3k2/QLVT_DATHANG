@@ -76,45 +76,45 @@ namespace QLVT_DATHANG.Reports
             // mANVLabel
             // 
             mANVLabel.AutoSize = true;
-            mANVLabel.Location = new System.Drawing.Point(23, 42);
+            mANVLabel.Location = new System.Drawing.Point(39, 71);
             mANVLabel.Name = "mANVLabel";
-            mANVLabel.Size = new System.Drawing.Size(64, 19);
+            mANVLabel.Size = new System.Drawing.Size(76, 23);
             mANVLabel.TabIndex = 0;
             mANVLabel.Text = "Mã NV:";
             // 
             // tENLabel
             // 
             tENLabel.AutoSize = true;
-            tENLabel.Location = new System.Drawing.Point(23, 82);
+            tENLabel.Location = new System.Drawing.Point(39, 111);
             tENLabel.Name = "tENLabel";
-            tENLabel.Size = new System.Drawing.Size(64, 19);
+            tENLabel.Size = new System.Drawing.Size(79, 23);
             tENLabel.TabIndex = 2;
             tENLabel.Text = "Họ Tên:";
             // 
             // sOCMNDLabel
             // 
             sOCMNDLabel.AutoSize = true;
-            sOCMNDLabel.Location = new System.Drawing.Point(407, 82);
+            sOCMNDLabel.Location = new System.Drawing.Point(428, 111);
             sOCMNDLabel.Name = "sOCMNDLabel";
-            sOCMNDLabel.Size = new System.Drawing.Size(65, 19);
+            sOCMNDLabel.Size = new System.Drawing.Size(77, 23);
             sOCMNDLabel.TabIndex = 5;
             sOCMNDLabel.Text = "CMND:";
             // 
             // dIACHILabel
             // 
             dIACHILabel.AutoSize = true;
-            dIACHILabel.Location = new System.Drawing.Point(22, 122);
+            dIACHILabel.Location = new System.Drawing.Point(38, 151);
             dIACHILabel.Name = "dIACHILabel";
-            dIACHILabel.Size = new System.Drawing.Size(65, 19);
+            dIACHILabel.Size = new System.Drawing.Size(80, 23);
             dIACHILabel.TabIndex = 7;
             dIACHILabel.Text = "Địa Chỉ:";
             // 
             // nGAYSINHLabel
             // 
             nGAYSINHLabel.AutoSize = true;
-            nGAYSINHLabel.Location = new System.Drawing.Point(389, 122);
+            nGAYSINHLabel.Location = new System.Drawing.Point(410, 151);
             nGAYSINHLabel.Name = "nGAYSINHLabel";
-            nGAYSINHLabel.Size = new System.Drawing.Size(83, 19);
+            nGAYSINHLabel.Size = new System.Drawing.Size(102, 23);
             nGAYSINHLabel.TabIndex = 9;
             nGAYSINHLabel.Text = "Ngày Sinh:";
             // 
@@ -125,7 +125,7 @@ namespace QLVT_DATHANG.Reports
             this.label1.Location = new System.Drawing.Point(170, 25);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(408, 31);
+            this.label1.Size = new System.Drawing.Size(491, 37);
             this.label1.TabIndex = 3;
             this.label1.Text = "HOẠT ĐỘNG CỦA NHÂN VIÊN";
             // 
@@ -164,7 +164,7 @@ namespace QLVT_DATHANG.Reports
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(757, 83);
+            this.panelControl1.Size = new System.Drawing.Size(811, 83);
             this.panelControl1.TabIndex = 5;
             // 
             // panelControl2
@@ -172,9 +172,9 @@ namespace QLVT_DATHANG.Reports
             this.panelControl2.Controls.Add(this.btnThoat);
             this.panelControl2.Controls.Add(this.btnXemTruoc);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl2.Location = new System.Drawing.Point(0, 336);
+            this.panelControl2.Location = new System.Drawing.Point(0, 385);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(757, 64);
+            this.panelControl2.Size = new System.Drawing.Size(811, 64);
             this.panelControl2.TabIndex = 6;
             this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
             // 
@@ -227,7 +227,7 @@ namespace QLVT_DATHANG.Reports
             this.groupBoxNhanVien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxNhanVien.Location = new System.Drawing.Point(0, 83);
             this.groupBoxNhanVien.Name = "groupBoxNhanVien";
-            this.groupBoxNhanVien.Size = new System.Drawing.Size(757, 253);
+            this.groupBoxNhanVien.Size = new System.Drawing.Size(811, 302);
             this.groupBoxNhanVien.TabIndex = 7;
             this.groupBoxNhanVien.TabStop = false;
             this.groupBoxNhanVien.Text = "Thông Tin Nhân Viên";
@@ -237,66 +237,66 @@ namespace QLVT_DATHANG.Reports
             this.txtNgaySinh.CustomFormat = "dd/MM/yyyy";
             this.txtNgaySinh.Enabled = false;
             this.txtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txtNgaySinh.Location = new System.Drawing.Point(478, 119);
+            this.txtNgaySinh.Location = new System.Drawing.Point(511, 148);
             this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Size = new System.Drawing.Size(256, 26);
+            this.txtNgaySinh.Size = new System.Drawing.Size(256, 30);
             this.txtNgaySinh.TabIndex = 19;
             // 
             // txtCMND
             // 
-            this.txtCMND.Location = new System.Drawing.Point(478, 79);
+            this.txtCMND.Location = new System.Drawing.Point(511, 108);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCMND.Properties.Appearance.Options.UseFont = true;
             this.txtCMND.Properties.ReadOnly = true;
-            this.txtCMND.Size = new System.Drawing.Size(256, 26);
+            this.txtCMND.Size = new System.Drawing.Size(256, 28);
             this.txtCMND.TabIndex = 18;
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(93, 119);
+            this.txtDiaChi.Location = new System.Drawing.Point(126, 148);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Properties.Appearance.Options.UseFont = true;
             this.txtDiaChi.Properties.ReadOnly = true;
-            this.txtDiaChi.Size = new System.Drawing.Size(256, 26);
+            this.txtDiaChi.Size = new System.Drawing.Size(256, 28);
             this.txtDiaChi.TabIndex = 17;
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(93, 79);
+            this.txtHoTen.Location = new System.Drawing.Point(126, 108);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoTen.Properties.Appearance.Options.UseFont = true;
             this.txtHoTen.Properties.ReadOnly = true;
-            this.txtHoTen.Size = new System.Drawing.Size(256, 26);
+            this.txtHoTen.Size = new System.Drawing.Size(256, 28);
             this.txtHoTen.TabIndex = 16;
             // 
             // txtMaNV
             // 
-            this.txtMaNV.Location = new System.Drawing.Point(93, 39);
+            this.txtMaNV.Location = new System.Drawing.Point(126, 68);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNV.Properties.Appearance.Options.UseFont = true;
             this.txtMaNV.Properties.ReadOnly = true;
-            this.txtMaNV.Size = new System.Drawing.Size(256, 26);
+            this.txtMaNV.Size = new System.Drawing.Size(256, 28);
             this.txtMaNV.TabIndex = 15;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(395, 174);
+            this.label3.Location = new System.Drawing.Point(416, 203);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 19);
+            this.label3.Size = new System.Drawing.Size(95, 23);
             this.label3.TabIndex = 14;
             this.label3.Text = "Tới Ngày:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 174);
+            this.label2.Location = new System.Drawing.Point(29, 203);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 19);
+            this.label2.Size = new System.Drawing.Size(91, 23);
             this.label2.TabIndex = 13;
             this.label2.Text = "Từ Ngày:";
             // 
@@ -304,9 +304,9 @@ namespace QLVT_DATHANG.Reports
             // 
             this.dtpToiNgay.CustomFormat = "dd/MM/yyyy";
             this.dtpToiNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpToiNgay.Location = new System.Drawing.Point(478, 168);
+            this.dtpToiNgay.Location = new System.Drawing.Point(511, 197);
             this.dtpToiNgay.Name = "dtpToiNgay";
-            this.dtpToiNgay.Size = new System.Drawing.Size(256, 26);
+            this.dtpToiNgay.Size = new System.Drawing.Size(256, 30);
             this.dtpToiNgay.TabIndex = 12;
             this.dtpToiNgay.Value = new System.DateTime(2024, 6, 2, 0, 0, 0, 0);
             // 
@@ -314,17 +314,17 @@ namespace QLVT_DATHANG.Reports
             // 
             this.dtpTuNgay.CustomFormat = "dd/MM/yyyy";
             this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTuNgay.Location = new System.Drawing.Point(93, 168);
+            this.dtpTuNgay.Location = new System.Drawing.Point(126, 197);
             this.dtpTuNgay.Name = "dtpTuNgay";
-            this.dtpTuNgay.Size = new System.Drawing.Size(256, 26);
+            this.dtpTuNgay.Size = new System.Drawing.Size(256, 30);
             this.dtpTuNgay.TabIndex = 11;
             this.dtpTuNgay.Value = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             // 
             // btnChonNhanVien
             // 
-            this.btnChonNhanVien.Location = new System.Drawing.Point(393, 36);
+            this.btnChonNhanVien.Location = new System.Drawing.Point(426, 65);
             this.btnChonNhanVien.Name = "btnChonNhanVien";
-            this.btnChonNhanVien.Size = new System.Drawing.Size(150, 31);
+            this.btnChonNhanVien.Size = new System.Drawing.Size(341, 31);
             this.btnChonNhanVien.TabIndex = 4;
             this.btnChonNhanVien.Text = "Chọn Nhân Viên";
             this.btnChonNhanVien.UseVisualStyleBackColor = true;
@@ -332,15 +332,16 @@ namespace QLVT_DATHANG.Reports
             // 
             // Frpt_TinhHinhHoatDongNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 400);
+            this.ClientSize = new System.Drawing.Size(811, 449);
             this.Controls.Add(this.groupBoxNhanVien);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Frpt_TinhHinhHoatDongNhanVien";
             this.Text = "Tình Hình Hoạt Động Nhân Viên";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frpt_TinhHinhHoatDongNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();

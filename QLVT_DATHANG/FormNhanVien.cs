@@ -263,7 +263,7 @@ namespace QLVT_DATHANG
                 return false;
             }
 
-            int luong = int.Parse(txtLuong.Text.Replace(",", ""));
+            int luong = int.Parse(txtLuong.Text.Replace(".", ""));
             if (luong < 4000000)
             {
                 MessageBox.Show("Mức lương phải lớn hơn hoặc bằng 4.000.000", "Thông báo", MessageBoxButtons.OK);
@@ -424,6 +424,16 @@ namespace QLVT_DATHANG
             }
         }
 
+        private void xoaLogin(string loginname, string username) 
+        {
+            string cauTruyVan = "Exec sp_Xoa_Login '" + loginname + "', '" + username + "'"; 
+            if (Program.KetNoi() == 0)
+            {
+                return;
+            }
+            int n = Program.ExecSqlNonQuery(cauTruyVan);
+        }
+
         private void barButtonItemXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             int maNhanVien = int.Parse(((DataRowView)bdsNhanVien[bdsNhanVien.Position])["MANV"].ToString());
@@ -459,6 +469,7 @@ namespace QLVT_DATHANG
             {
                 try
                 {
+                    /*xoaLogin(txtMaNV.Text, txtMaNV.Text)*/;
                     bdsNhanVien.RemoveCurrent();
                     this.NhanVienTableAdapter.Connection.ConnectionString = Program.connstr;                   
                     this.NhanVienTableAdapter.Update(this.DS.NhanVien);

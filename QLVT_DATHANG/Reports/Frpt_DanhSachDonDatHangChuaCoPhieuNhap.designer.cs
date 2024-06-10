@@ -94,8 +94,9 @@ namespace QLVT_DATHANG.Reports
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(925, 51);
+            this.panelControl1.Size = new System.Drawing.Size(1233, 63);
             this.panelControl1.TabIndex = 0;
             // 
             // label1
@@ -106,10 +107,9 @@ namespace QLVT_DATHANG.Reports
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(98, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(131, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(732, 31);
+            this.label1.Size = new System.Drawing.Size(884, 37);
             this.label1.TabIndex = 2;
             this.label1.Text = "DANH SÁCH ĐƠN ĐẶT HÀNG KHÔNG CÓ PHIẾU NHẬP";
             // 
@@ -118,9 +118,10 @@ namespace QLVT_DATHANG.Reports
             this.panelControl2.Controls.Add(this.btnThoat);
             this.panelControl2.Controls.Add(this.btnXemTruoc);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl2.Location = new System.Drawing.Point(0, 454);
+            this.panelControl2.Location = new System.Drawing.Point(0, 558);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(925, 94);
+            this.panelControl2.Size = new System.Drawing.Size(1233, 116);
             this.panelControl2.TabIndex = 1;
             // 
             // btnThoat
@@ -128,10 +129,10 @@ namespace QLVT_DATHANG.Reports
             this.btnThoat.BackColor = System.Drawing.Color.Red;
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(560, 31);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThoat.Location = new System.Drawing.Point(747, 38);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(154, 39);
+            this.btnThoat.Size = new System.Drawing.Size(205, 48);
             this.btnThoat.TabIndex = 9;
             this.btnThoat.Text = "THOÁT";
             this.btnThoat.UseVisualStyleBackColor = false;
@@ -142,10 +143,10 @@ namespace QLVT_DATHANG.Reports
             this.btnXemTruoc.BackColor = System.Drawing.Color.Blue;
             this.btnXemTruoc.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemTruoc.ForeColor = System.Drawing.Color.White;
-            this.btnXemTruoc.Location = new System.Drawing.Point(210, 31);
-            this.btnXemTruoc.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXemTruoc.Location = new System.Drawing.Point(280, 38);
+            this.btnXemTruoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXemTruoc.Name = "btnXemTruoc";
-            this.btnXemTruoc.Size = new System.Drawing.Size(154, 39);
+            this.btnXemTruoc.Size = new System.Drawing.Size(205, 48);
             this.btnXemTruoc.TabIndex = 8;
             this.btnXemTruoc.Text = "XEM TRƯỚC";
             this.btnXemTruoc.UseVisualStyleBackColor = false;
@@ -155,19 +156,22 @@ namespace QLVT_DATHANG.Reports
             // 
             this.panelControl3.Controls.Add(this.gcDSDDHKhongPN);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl3.Location = new System.Drawing.Point(0, 51);
+            this.panelControl3.Location = new System.Drawing.Point(0, 63);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(925, 403);
+            this.panelControl3.Size = new System.Drawing.Size(1233, 495);
             this.panelControl3.TabIndex = 2;
             // 
             // gcDSDDHKhongPN
             // 
             this.gcDSDDHKhongPN.DataSource = this.bdsDSDDHKhongPN;
             this.gcDSDDHKhongPN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcDSDDHKhongPN.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gcDSDDHKhongPN.Location = new System.Drawing.Point(2, 2);
             this.gcDSDDHKhongPN.MainView = this.gridView1;
+            this.gcDSDDHKhongPN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gcDSDDHKhongPN.Name = "gcDSDDHKhongPN";
-            this.gcDSDDHKhongPN.Size = new System.Drawing.Size(921, 399);
+            this.gcDSDDHKhongPN.Size = new System.Drawing.Size(1229, 491);
             this.gcDSDDHKhongPN.TabIndex = 0;
             this.gcDSDDHKhongPN.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -180,6 +184,7 @@ namespace QLVT_DATHANG.Reports
             this.colNhaCC,
             this.colMANV,
             this.colMAKHO});
+            this.gridView1.DetailHeight = 431;
             this.gridView1.GridControl = this.gcDSDDHKhongPN;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -188,52 +193,64 @@ namespace QLVT_DATHANG.Reports
             // 
             this.colMasoDDH.Caption = "MSĐĐH";
             this.colMasoDDH.FieldName = "MasoDDH";
+            this.colMasoDDH.MinWidth = 27;
             this.colMasoDDH.Name = "colMasoDDH";
             this.colMasoDDH.Visible = true;
             this.colMasoDDH.VisibleIndex = 0;
+            this.colMasoDDH.Width = 100;
             // 
             // colNGAY
             // 
             this.colNGAY.Caption = "NGÀY";
             this.colNGAY.FieldName = "NGAY";
+            this.colNGAY.MinWidth = 27;
             this.colNGAY.Name = "colNGAY";
             this.colNGAY.Visible = true;
             this.colNGAY.VisibleIndex = 1;
+            this.colNGAY.Width = 100;
             // 
             // colNhaCC
             // 
             this.colNhaCC.Caption = "NHÀ CUNG CẤP";
             this.colNhaCC.FieldName = "NhaCC";
+            this.colNhaCC.MinWidth = 27;
             this.colNhaCC.Name = "colNhaCC";
             this.colNhaCC.Visible = true;
             this.colNhaCC.VisibleIndex = 2;
+            this.colNhaCC.Width = 100;
             // 
             // colMANV
             // 
             this.colMANV.Caption = "MÃ NV";
             this.colMANV.FieldName = "MANV";
+            this.colMANV.MinWidth = 27;
             this.colMANV.Name = "colMANV";
             this.colMANV.Visible = true;
             this.colMANV.VisibleIndex = 3;
+            this.colMANV.Width = 100;
             // 
             // colMAKHO
             // 
             this.colMAKHO.Caption = "MÃ KHO";
             this.colMAKHO.FieldName = "MAKHO";
+            this.colMAKHO.MinWidth = 27;
             this.colMAKHO.Name = "colMAKHO";
             this.colMAKHO.Visible = true;
             this.colMAKHO.VisibleIndex = 4;
+            this.colMAKHO.Width = 100;
             // 
             // Frpt_DanhSachDonDatHangChuaCoPhieuNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 548);
+            this.ClientSize = new System.Drawing.Size(1233, 674);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Frpt_DanhSachDonDatHangChuaCoPhieuNhap";
             this.Text = "Danh Sách Đơn ĐH Chưa Có Phiếu Nhập";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frpt_DanhSachDonDatHangChuaCoPhieuNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsDSDDHKhongPN)).EndInit();

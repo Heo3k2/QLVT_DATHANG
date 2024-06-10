@@ -59,10 +59,9 @@ namespace QLVT_DATHANG.Reports
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(544, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(725, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(322, 31);
+            this.label1.Size = new System.Drawing.Size(387, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "IN DANH SÁCH VẬT TƯ";
             // 
@@ -71,10 +70,10 @@ namespace QLVT_DATHANG.Reports
             this.btnThoat.BackColor = System.Drawing.Color.Red;
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(745, 61);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThoat.Location = new System.Drawing.Point(993, 75);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(154, 39);
+            this.btnThoat.Size = new System.Drawing.Size(205, 48);
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "THOÁT";
             this.btnThoat.UseVisualStyleBackColor = false;
@@ -85,10 +84,10 @@ namespace QLVT_DATHANG.Reports
             this.btnXemTruoc.BackColor = System.Drawing.Color.Blue;
             this.btnXemTruoc.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemTruoc.ForeColor = System.Drawing.Color.White;
-            this.btnXemTruoc.Location = new System.Drawing.Point(447, 61);
-            this.btnXemTruoc.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXemTruoc.Location = new System.Drawing.Point(596, 75);
+            this.btnXemTruoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXemTruoc.Name = "btnXemTruoc";
-            this.btnXemTruoc.Size = new System.Drawing.Size(154, 39);
+            this.btnXemTruoc.Size = new System.Drawing.Size(205, 48);
             this.btnXemTruoc.TabIndex = 4;
             this.btnXemTruoc.Text = "XEM TRƯỚC";
             this.btnXemTruoc.UseVisualStyleBackColor = false;
@@ -130,27 +129,31 @@ namespace QLVT_DATHANG.Reports
             this.panel1.Controls.Add(this.btnXemTruoc);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1314, 109);
+            this.panel1.Size = new System.Drawing.Size(1752, 134);
             this.panel1.TabIndex = 6;
             // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.gcVatTu);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 109);
+            this.panelControl1.Location = new System.Drawing.Point(0, 134);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1314, 461);
+            this.panelControl1.Size = new System.Drawing.Size(1752, 568);
             this.panelControl1.TabIndex = 7;
             // 
             // gcVatTu
             // 
             this.gcVatTu.DataSource = this.bdsVatTu;
             this.gcVatTu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcVatTu.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gcVatTu.Location = new System.Drawing.Point(2, 2);
             this.gcVatTu.MainView = this.gridView1;
+            this.gcVatTu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gcVatTu.Name = "gcVatTu";
-            this.gcVatTu.Size = new System.Drawing.Size(1310, 457);
+            this.gcVatTu.Size = new System.Drawing.Size(1748, 564);
             this.gcVatTu.TabIndex = 0;
             this.gcVatTu.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -162,6 +165,7 @@ namespace QLVT_DATHANG.Reports
             this.colTENVT,
             this.colDVT,
             this.colSOLUONGTON});
+            this.gridView1.DetailHeight = 431;
             this.gridView1.GridControl = this.gcVatTu;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -172,43 +176,53 @@ namespace QLVT_DATHANG.Reports
             // 
             this.colMAVT.Caption = "Mã Vật Tư";
             this.colMAVT.FieldName = "MAVT";
+            this.colMAVT.MinWidth = 27;
             this.colMAVT.Name = "colMAVT";
             this.colMAVT.Visible = true;
             this.colMAVT.VisibleIndex = 0;
+            this.colMAVT.Width = 100;
             // 
             // colTENVT
             // 
             this.colTENVT.Caption = "Tên Vật Tư";
             this.colTENVT.FieldName = "TENVT";
+            this.colTENVT.MinWidth = 27;
             this.colTENVT.Name = "colTENVT";
             this.colTENVT.Visible = true;
             this.colTENVT.VisibleIndex = 1;
+            this.colTENVT.Width = 100;
             // 
             // colDVT
             // 
             this.colDVT.Caption = "Đơn Vị Tính";
             this.colDVT.FieldName = "DVT";
+            this.colDVT.MinWidth = 27;
             this.colDVT.Name = "colDVT";
             this.colDVT.Visible = true;
             this.colDVT.VisibleIndex = 2;
+            this.colDVT.Width = 100;
             // 
             // colSOLUONGTON
             // 
             this.colSOLUONGTON.Caption = "Số Lượng Tồn";
             this.colSOLUONGTON.FieldName = "SOLUONGTON";
+            this.colSOLUONGTON.MinWidth = 27;
             this.colSOLUONGTON.Name = "colSOLUONGTON";
             this.colSOLUONGTON.Visible = true;
             this.colSOLUONGTON.VisibleIndex = 3;
+            this.colSOLUONGTON.Width = 100;
             // 
             // Frpt_DanhSachVatTu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1314, 570);
+            this.ClientSize = new System.Drawing.Size(1752, 702);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Frpt_DanhSachVatTu";
             this.Text = "Danh Sách Vật Tư";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frpt_DanhSachVatTu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsVatTu)).EndInit();
