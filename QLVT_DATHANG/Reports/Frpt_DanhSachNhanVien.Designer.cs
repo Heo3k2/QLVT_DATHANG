@@ -113,6 +113,7 @@ namespace QLVT_DATHANG.Reports
             // 
             // cmbChiNhanh
             // 
+            this.cmbChiNhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbChiNhanh.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbChiNhanh.FormattingEnabled = true;
             this.cmbChiNhanh.Location = new System.Drawing.Point(350, 29);

@@ -423,58 +423,6 @@ namespace QLVT_DATHANG
             }
         }
 
-        private int kiemTraSLVTTrongVattu(string MAVT)
-        {
-            string cauTruyVan = "SELECT SOLUONGTON FROM Vattu WHERE MAVT = '" + MAVT + "'";
-            SqlCommand sqlCommand = new SqlCommand(cauTruyVan, Program.conn);
-            try
-            {
-                Program.myReader = Program.ExecSqlDataReader(cauTruyVan);
-
-                if (Program.myReader == null)
-                {
-                    return -1;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Thực thi database thất bại!\n\n" + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Console.WriteLine(ex.Message);
-                return -1;
-            }
-
-            Program.myReader.Read();
-            int result = int.Parse(Program.myReader.GetValue(0).ToString());
-            Program.myReader.Close();
-            return result;
-        }
-
-        private int kiemTraSLVT(string MasoDDH, string MAVT)
-        {
-            string cauTruyVan = "SELECT COALESCE(SUM(SOLUONG), 0) AS SOLUONG FROM CTDDH WHERE MasoDDH = '" + MasoDDH +
-                                    "' AND MAVT = '" + MAVT + "'";
-            SqlCommand sqlCommand = new SqlCommand(cauTruyVan, Program.conn);
-            try
-            {
-                Program.myReader = Program.ExecSqlDataReader(cauTruyVan);
-
-                if (Program.myReader == null)
-                {
-                    return -1;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Thực thi database thất bại!\n\n" + ex.Message, "Thông báo",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Console.WriteLine(ex.Message);
-                return -1;
-            }
-            Program.myReader.Read();
-            int result = int.Parse(Program.myReader.GetValue(0).ToString());
-            Program.myReader.Close();
-            return result;
-        }
 
         private bool kiemTraDuLieuVT()
         {

@@ -488,6 +488,7 @@ namespace QLVT_DATHANG
             this.cmbTenKho.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bdsPX, "MAKHO", true));
             this.cmbTenKho.DataSource = this.bdsDSKho;
             this.cmbTenKho.DisplayMember = "TENKHO";
+            this.cmbTenKho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTenKho.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTenKho.FormattingEnabled = true;
             this.cmbTenKho.Location = new System.Drawing.Point(422, 220);
